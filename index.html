@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Senha Master</title>
+		<style>
+			.container{
+				background-color: gray;
+				height:35%;
+				align-items: center;
+				text-align:center;
+				justify-content:center;
+				display:flex;
+			}
+			.senha{
+				color: white;
+				font-weight: 800;
+				font-size: 8vh;
+				padding-top: 3%;
+				padding-bottom: 0%;
+			}
+			h1{
+			   color: white;
+			}
+		</style>
+		<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4305/4305417.png" type="image/x-icon"/>
+	</head>
+	<body>
+	<div class="container">
+		<p class="senha">
+			<script>
+				  var data = new Date();
+				  var dia= data.getDate(); 
+				  var mes= data.getMonth();
+				  var ano= data.getFullYear();; 
+				  ano = ano %100;
+				  var day = new Date();
+				  var dayWeek = day.getDay();
+				  dayWeek=dayWeek+1;
+				  var soma=0;	
+				  mes= mes+1;	  	  
+				  var converteDia = dia.toString();
+				  var digito1= converteDia.substr(0,1);
+				  var digito2 = converteDia.substr(1);
+					  
+				  soma = (digito1+digito2)*dayWeek;
+				  var converteSoma = soma.toString();
+
+				if(mes<10 && dia<10){
+					document.write("0"+converteSoma+"0"+mes+"0"+dia);
+				}
+				else if(mes<10){
+					 document.write(converteSoma+"0"+mes+""+dia)
+				}
+				else if(mes>10 && dia<10){
+					 document.write("0"+converteSoma+"0"+mes+""+dia)
+				}
+				else{
+					 document.write(converteSoma.substr(1)+""+ano+""+mes+""+dia);
+				}
+			   
+			</script>
+		</p>
+	</div>
+	</body>
+</html>
