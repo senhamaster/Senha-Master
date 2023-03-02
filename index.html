@@ -44,13 +44,13 @@
 				  soma = (digito1+digito2)*dayWeek;
 				  var converteSoma = soma.toString();
 
-				if(mes<10 && dia<10){
+				if(mes<10 && soma<10){
 					document.write("0"+converteSoma+"0"+mes+"0"+dia);
 				}
 				else if(mes<10){
 					 document.write(converteSoma+"0"+mes+""+dia)
 				}
-				else if(mes>10 && dia<10){
+				else if(mes>10 && soma<10){
 					 document.write("0"+converteSoma+"0"+mes+""+dia)
 				}
 				else{
