@@ -1,9 +1,9 @@
 <html>
-      <head>
-	  <title>Senha Master</title>
+     <head>
+	<title>Senha Master</title>
 		<style>
 			.container{
-				background-color:2b373d;
+				background-color: gray;
 				height:35%;
 				align-items: center;
 				text-align:center;
@@ -39,7 +39,11 @@
 				 mes= mes+1;	  	  
 				 var converteDia = dia.toString();
 				 var digito1= converteDia.substr(0,1);
-				 var digito2 = converteDia.substr(1);                  
+				 var digito2 = converteDia.substr(1);    
+				 
+				 if (digito2==''){
+					digito2=0;
+				 }
 					  
 				 soma = (parseInt(digito1)+parseInt(digito2))*dayWeek;
 
@@ -53,20 +57,19 @@
 				}
 
 				if(soma<=10){
-			          var cnvSoma = '0'+converteSoma;
+			           var cnvSoma = '0'+converteSoma;
 				}
-                                if(mes>=10){
+                		if(mes>=10){
 			          var cnvMes= mes;		
-                                }
-                                if(dia>=10){
+                		}
+                		if(dia>=10){
 				   var cnvDia = dia;	
-                                }
+                		}
 				if(soma>=10){
 				  var cnvSoma = converteSoma;
 				}
 
-				if(cnvMes || cnvSoma || cnvDia){					
-					
+				if(cnvMes || cnvSoma || cnvDia){	
 					document.write(cnvSoma+cnvMes+cnvDia);	
 				}				
 				
@@ -75,9 +78,8 @@
 						
 				}
 				
-			   
-			</script>
+	            </script>
 		</p>
-	</div>
+	     </div>
 	</body>
 </html>
